@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automotive</title>
+    <link rel="stylesheet" href="prodesign.css">
+</head>
+<body>
+    <div class="idk">
+        <a href="index.html">
+            <img src="obrazky/logo.png" class="logo">
+        </a>
+            <nav class="menu">
+                <a href="index.html#home">HOME</a>
+                <a href="index.html#about">ABOUT ME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+         </div>
+    <main class="portfolio">
+        <h1>Automotive</h1>
+        <div class="galerie">
+            <div class="fotka"><img src="obrazky/auto1.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto2.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto3.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto4.jpg"></div>
+
+            <div class="fotka"><img src="obrazky/auto5.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto6.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto7.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto8.jpg"></div>
+
+            <div class="fotka"><img src="obrazky/auto9.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto10.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto11.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto12.jpg"></div>
+
+            <div class="fotka"><img src="obrazky/auto13.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto14.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto15.jpg"></div>
+            <div class="fotka"><img src="obrazky/auto16.jpg"></div>
+        </div>
+    </main>
+       <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightboxobsah" id="fotka">
+    </div>
+        <script>
+const images = document.querySelectorAll('.fotka img');
+const lightbox = document.getElementById('lightbox');
+const fotka = document.getElementById('fotka');
+const closeBtn = document.querySelector('.lightbox .close');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        fotka.src = img.src;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+})
+</script>
+<footer class="footer">
+    <p>© 2025 Alois Vidlák. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.instagram.com/photos_machen/" target="_blank">
+            <img src="obrazky/Instagram_logo_2022.svg.png">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aloisvidlak939@gmail.com" target="_blank">
+            <img src="obrazky/Gmail_icon_(2020).svg.png">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

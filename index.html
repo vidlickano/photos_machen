@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photosmachen</title>
+    <link rel="stylesheet" href="prodesign.css">
+</head>
+<body>
+    <div class="idk">
+        <a href="index.html">
+            <img src="obrazky/logo.png" class="logo">
+        </a>
+            <nav class="menu">
+                <a href="index.html#home">HOME</a>
+                <a href="index.html#about">ABOUT ME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+     </div>
+    <header id="home" class="hero">
+    </header>
+    <section id="about" class="about">
+        <div class="aboutcast">
+            <div class="aboutbox">
+                <img src="obrazky/nejakejfesak.jpg" class="aboutfotka">
+                <div class="abouttext">
+                    <h2>About Me</h2>
+                    <p>Hey! My name is Alois Vidlák, I am 17 and I love photography. Most of the time I shoot cars, but sometimes I like to try other things too. I am always amazed at how creative people can be with a camera, and I enjoy telling a little story with every photo I take. Photography got me hooked when a friend of mine bought a camera. I borrowed it at first, loved it so much that I got my own, and have been exploring photography and motorsports ever since.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nahled">
+        <h2>Some of My WORK</h2>
+        <div class="nahledfotky">
+            <img src="obrazky/nahled1.jpg" class="lightboximg">
+            <img src="obrazky/nahled2.jpg" class="lightboximg">
+            <img src="obrazky/nahled3.jpg" class="lightboximg">
+            <img src="obrazky/nahled4.jpg" class="lightboximg">
+        </div>
+        <a href="portfolio.html" class="viewmore">VIEW WORK</a>
+    </section>
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightboxobsah" id="lightboximg">
+    </div>
+    <script>
+    const images = document.querySelectorAll('.lightboximg');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboximg');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
+<section id="contact" class="contact">
+    <h2>Get in touch</h2>
+    <div class="contactbox">
+        <a href="https://www.instagram.com/photos_machen/" target="_blank" class="contacttext">
+            <img src="obrazky/Instagram_logo_2022.svg.png">
+            <span>@photos_machen</span>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aloisvidlak939@gmail.com" target="_blank" class="contacttext">
+            <img src="obrazky/Gmail_icon_(2020).svg.png">
+            <span>aloisvidlak939@gmail.com</span>
+        </a>
+    </div>
+
+</section>
+<footer class="footer">
+    <p>© 2025 Alois Vidlák. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.instagram.com/photos_machen/" target="_blank">
+            <img src="obrazky/Instagram_logo_2022.svg.png">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aloisvidlak939@gmail.com" target="_blank">
+            <img src="obrazky/Gmail_icon_(2020).svg.png">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

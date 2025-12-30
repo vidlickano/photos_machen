@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+.idk {
+    background-color: #141414;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 100px;
+    width: auto;
+}
+.hero {
+     height: 100vh;
+    background-image: url(obrazky/gtr.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    gap: 40px;
+    margin-right: 25px;
+}
+.menu a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.menu a:hover {
+    color: #555555;
+}
+.about {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+.aboutcast {
+    max-width: 1000px;
+}
+.aboutfotka {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+.abouttext h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1b1b1b;
+}
+.abouttext p {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #1b1b1b;
+}
+.aboutbox {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 40px;
+    flex-direction: row;
+}
+.abouttext {
+    flex: 1;
+    min-width: 0;
+    word-wrap: none;
+    width: 100%;
+}
+.nahled {
+    padding: 100px 40px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.nahled h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #1b1b1b;
+}
+.nahledfotky {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.nahledfotky img {
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+.nahledfotky img:hover {
+    transform: scale(1.02);
+}
+.viewmore {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #141414;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+.viewmore:hover {
+    transform: scale(1.02);
+}
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.lightboxobsah {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.portfoliovyber {
+    padding: 140px 40px 80px;
+    text-align: center;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+.portfoliovyber h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #141414;
+}
+.vybergrid {
+    display: grid;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.kategorie {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+    transition: 0.3s ease;
+}
+.kategorie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.kategorie span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    font-size: 1.5rem;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+.kategorie:hover {
+    transform: scale(1.02);
+}
+.kategorienadpis {
+    text-align: center;
+    padding: 15px;
+    opacity: 0;
+    z-index: 2;
+}
+.kategorie:hover .kategorienadpis {
+    opacity: 1;
+}
+.kategorie:hover img {
+    filter: brightness(50%);
+}
+.portfolio h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 60px;
+    color: #141414;
+}
+.galerie {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 20px 60px;
+    max-width: 1200px;
+    justify-items: center;
+    margin: 0 auto;
+}
+.fotka {
+    width: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    width: 100%;
+}
+.fotka img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+    object-fit: cover;
+}
+.fotka img:hover {
+    transform: scale(1.02);
+    filter: brightness(60%);
+}
+.contact {
+    padding: 120px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #141414;
+}
+.contactbox {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.contacttext {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #141414;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.contacttext:hover {
+    transform: scale(1.02);
+}
+.contacttext img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.footer {
+    background-color: #141414;
+    color: #e1e1e1;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.footer .socials a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+.footer .socials a:hover img {
+    transform: scale(1.1)
+}
+html, body {
+    height: auto;
+    display: block;
+    min-height: 100%;
+}
+body > header,
+body > main,
+body > section {
+    flex: none;
+}
+.footer {
+    flex-shrink: 0;
+    background-color: #141414;
+    color: #f3f3f3;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer1 {
+  position: absolute;
+  right: 0;bottom:0;left:0;
+}
+.footer1 {
+    background-color: #141414;
+    color: #e1e1e1;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer1 p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.footer1 .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.footer1 .socials a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+.footer1 .socials a:hover img {
+    transform: scale(1.1)
+}
+html, body {
+    height: auto;
+    display: block;
+    min-height: 100%;
+}
+body > header,
+body > main,
+body > section {
+    flex: none;
+}
+.footer1 {
+    flex-shrink: 0;
+    background-color: #141414;
+    color: #f3f3f3;
+    padding: 40px 20px;
+    text-align: center;
+}
